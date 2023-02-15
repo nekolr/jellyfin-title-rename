@@ -25,4 +25,5 @@ if __name__ == "__main__":
             updateItem = UpdateItem()
             updateItem.set_metadata(userLibraryItem)
             status = jellyfinClient.update_item(updateItem)
-            print(status)
+            if status:
+                print('rename', updateItem.OriginalTitle, 'to', updateItem.Name)
